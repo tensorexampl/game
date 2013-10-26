@@ -1,5 +1,8 @@
-package src.main.java.game_serv;
+package game_server;
 
+
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.websocket.Session;
 
@@ -10,7 +13,7 @@ public class Game {
 	private final List<Session> specList = new ArrayList(); //Список подключенных клиентов
 	private final List<Session> playerList = new ArrayList(); //Список игроков
 	
-	public ednum GameState {
+	public enum GameState {
         CREATED, WAIT_FOR_PLAYERS, PLAYING, ENDED
     }
 	

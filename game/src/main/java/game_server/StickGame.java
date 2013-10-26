@@ -1,4 +1,4 @@
-
+package game_server;
 public class StickGame extends Game {
 	private int sticksCount = 20;
 	

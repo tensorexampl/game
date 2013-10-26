@@ -1,6 +1,9 @@
+package game_server;
+import java.util.Set;
+
 
 public class GameServer {
-	private static final Set<Game> games;
+	private static Set<Game> games;
 	
 	public enum GameType {
 		STICKS
