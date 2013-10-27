@@ -1,21 +1,23 @@
 package game_server;
-import java.util.Set;
 
+import java.util.Set;
 
 public class GameServer {
 	private static Set<Game> games;
 	
-	public enum GameType {
+	public static enum GameType {
 		STICKS
 	}
 	
-	public Game CreateGame() {
-		Game newGame = new Game();
+	public static Game CreateStickGame() {
+		StickGame newGame = new StickGame();
 		games.add(newGame);
 		return newGame;
 	}
 	
-	public void removeGame(Game toRemoveGame) {
+	public static void removeGame(Game toRemoveGame) {
 		games.remove(toRemoveGame);
 	}
+	
+	
 }

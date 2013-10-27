@@ -7,11 +7,11 @@ import java.util.List;
 import javax.websocket.Session;
 
 public class Game {
-	private GameState state; //Текущий статус игры
-	private final String id; //Идентификатор игры
+	private GameState state; 
+	private final String id; 
 	private static int idCounter = 0;
-	private final List<Session> specList = new ArrayList(); //Список подключенных клиентов
-	private final List<Session> playerList = new ArrayList(); //Список игроков
+	private final List<Session> specList = new ArrayList<Session>();
+	private final List<Session> playerList = new ArrayList<Session>();
 	
 	public enum GameState {
         CREATED, WAIT_FOR_PLAYERS, PLAYING, ENDED
@@ -55,5 +55,9 @@ public class Game {
 	
 	public List<Session> getSpectatorsList() {
 		return specList;
+	}
+	
+	public GameState getState() {
+		return state;
 	}
 }
